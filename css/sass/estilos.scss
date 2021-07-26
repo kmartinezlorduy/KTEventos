@@ -1,0 +1,191 @@
+@import "base/fuentes";
+@import "base/colores";
+@import "base/mixins";
+
+// html {
+//   font-family: $font_quicksand;
+//   font-size: 16px;
+//   color: black;
+// }
+
+html {
+  @include tipografiaBase($font_quicksand, 16px,null,null, null, null);
+  color: black;
+}
+
+
+//.h1Class {
+//  font-size: $font_h1size;
+//}
+
+.h1Class {
+  @include tipografiaBase(null, $font_h1size,null,null, null, null);
+}
+
+
+.h1Header {
+  font-size: $font_h1size;
+  animation-duration: 2s;
+  animation-name: aparecer;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+.pJustifyClass {
+  text-align: justify;
+}
+
+/* Font Style Font Family*/
+
+.italica {
+  @include tipografiaBase($font_comic, 16px,italic,null, null, null);
+}
+
+//.italica {
+//  font-style: italic;
+//  font-family: "Comic Sans MS", sans-serif;
+//  font-size: 16px;
+//}
+
+.corsiva {
+  @include tipografiaBase($font_monotypec, 35px,null,null, null, null);
+}
+
+.corsiva--min {
+  @include tipografiaBase($font_monotypec, 24px,null,null, null, null);
+}
+
+//.corsiva {
+//  font-family: "Monotype Corsiva", sans-serif;
+//  font-size: 35px;
+//}
+
+.serif {
+  @include tipografiaBase($brygada, 35px,null,null, null, null);
+}
+
+//.serif {
+//  font-family: "Brygada 1918", serif;
+//}
+
+
+
+
+header {
+  grid-area: header; /*Sirve para establecer el nombre del grid area*/
+  /*background-color: #AED6F1;*/
+  padding: 0px 0px 0px 10px;
+  background: linear-gradient(to right, #0495f5, #aed6f1);
+}
+
+
+
+nav {
+  grid-area: nav;
+  background-color: #fcf3cf;
+  padding: 0px 0px 0px 10px;
+  width: auto;
+}
+
+
+
+.background {
+  background-color: blueviolet;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+.social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+
+/*
+   Multicoloured Hover Variations
+*/
+
+// #social-fb:hover {
+//   color: #3b5998;
+// }
+// #social-tw:hover {
+//   color: #4099ff;
+// }
+// #social-gp:hover {
+//   color: #d34836;
+// }
+// #social-em:hover {
+//   color: #f39c12;
+// }
+
+@each $item, $color in $redes{
+  ##{$item}:hover{
+    color: $color;
+  }
+}
+
+
+.btn-primary{
+  background-color: white;
+  border: 1px solid pink;
+  color: rgb(250, 152, 168);
+}
+
+.btn-primary:hover{
+  background-color: pink;
+  color: white;
+  border: 1px solid pink;
+}
+
+
+.bg-primary-contact {
+  background-color:$bg_pink;
+  
+}
+
+.border-primary-contact {
+  border-color: $bg_pink;
+}
+
+.bg-dark-pink {
+  background-color: $bg_comp_pink;
+}
+
+.bg-secondary-pink{
+  background-color: $bg_pink;
+}
+
+.bg-secondary-radial{
+  background: rgb(72,238,139);
+  background: radial-gradient(circle, rgba(72,238,139,1) 0%, rgba(238,174,202,1) 66%);
+}
+//BEM
+.menu {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.menu__enlace{
+  color:white;
+  text-decoration: none;
+}
+
+.menu__enlace--active{
+  color: white;
+  text-decoration: underline;
+  font-size: 18px;
+}

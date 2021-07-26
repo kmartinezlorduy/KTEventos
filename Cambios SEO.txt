@@ -1,0 +1,8 @@
+1. Coloque las etiquetas Meta Description, Keyword y Title con Best keyword para wedding planning de acuerdo a investigaciones
+2. Navegación simple y acorde, no profunda.
+3. Utilizo jerarquia de etiquetas H1, H2,..
+4. Coloque contenido en los Alt de las imagenes.
+5. Con BEM marco la pagina donde esta enctualmente el usuario y doy opción para ir a cualquier parte del sitio.
+6. Uso viewport y media query para un sitio responsive
+7. Uso etiquetas semanticas
+8. las paginas están nombradas deacuerdo a su contenido
