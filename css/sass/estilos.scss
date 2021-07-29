@@ -1,3 +1,4 @@
+//npm run process-styles se debe correr para generar los css y min.css desde terminal
 @import "base/fuentes";
 @import "base/colores";
 @import "base/mixins";
@@ -8,11 +9,12 @@
 //   color: black;
 // }
 
+
+
 html {
   @include tipografiaBase($font_quicksand, 16px,null,null, null, null);
   color: black;
 }
-
 
 //.h1Class {
 //  font-size: $font_h1size;
@@ -89,7 +91,6 @@ header {
 }
 
 
-
 nav {
   grid-area: nav;
   background-color: #fcf3cf;
@@ -97,11 +98,9 @@ nav {
   width: auto;
 }
 
-
-.nav-paginator{
-  background-color: white;
+.nav-paginator {
+  background-color: blue;
 }
-
 
 .background {
   background-color: blueviolet;

@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss css/sass/estilos.scss css/estilos.css --output-style expanded node-sass",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "compile-styles": "node-sass --include-path scss css/sass/estilos.scss css/estilos.css --output-style expanded",
+    "css-minify": "node-sass --include-path scss css/sass/estilos.scss css/estilos.min.css --output-style compressed",
+    "process-styles": "npm run compile-styles && npm run css-minify"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kmartinezlorduy/KTEventos.git"
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/kmartinezlorduy/KTEventos#readme",
   "devDependencies": {
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "clean-css-cli": "^4.3.0"
   }
 }
