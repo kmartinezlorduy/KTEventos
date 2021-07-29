@@ -68,9 +68,7 @@ hr {
   border: 0;
   opacity: 0.25;
 }
-.nav-paginator{
-  background-color: white;
-}
+
 hr:not([size]) {
   height: 1px;
 }
