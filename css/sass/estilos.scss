@@ -3,12 +3,6 @@
 @import "base/colores";
 @import "base/mixins";
 
-// html {
-//   font-family: $font_quicksand;
-//   font-size: 16px;
-//   color: black;
-// }
-
 
 
 html {
@@ -16,9 +10,6 @@ html {
   color: black;
 }
 
-//.h1Class {
-//  font-size: $font_h1size;
-//}
 
 .h1Class {
   @include tipografiaBase(null, $font_h1size,null,null, null, null);
@@ -26,10 +17,11 @@ html {
 
 
 .h1Header {
-  font-size: $font_h1size;
-  animation-duration: 2s;
-  animation-name: aparecer;
-}
+   font-size:3.2vw;
+   animation-duration: 2s;
+   animation-name: aparecer;
+ }
+
 
 @keyframes aparecer {
   0% {
@@ -53,39 +45,25 @@ html {
   @include tipografiaBase($font_comic, 16px,italic,null, null, null);
 }
 
-//.italica {
-//  font-style: italic;
-//  font-family: "Comic Sans MS", sans-serif;
-//  font-size: 16px;
-//}
 
 .corsiva {
-  @include tipografiaBase($font_monotypec, 35px,null,null, null, null);
+  @include tipografiaBase($font_monotypec, 3.2vw,null,null, null, null);
 }
 
 .corsiva--min {
   @include tipografiaBase($font_monotypec, 24px,null,null, null, null);
 }
 
-//.corsiva {
-//  font-family: "Monotype Corsiva", sans-serif;
-//  font-size: 35px;
-//}
 
 .serif {
   @include tipografiaBase($brygada, 35px,null,null, null, null);
 }
-
-//.serif {
-//  font-family: "Brygada 1918", serif;
-//}
 
 
 
 
 header {
   grid-area: header; /*Sirve para establecer el nombre del grid area*/
-  /*background-color: #AED6F1;*/
   padding: 0px 0px 0px 10px;
   background: linear-gradient(to right, #0495f5, #aed6f1);
 }
@@ -99,7 +77,7 @@ nav {
 }
 
 .nav-paginator {
-  background-color: blue;
+  background-color: white;
 }
 
 .background {
@@ -119,18 +97,6 @@ nav {
    Multicoloured Hover Variations
 */
 
-// #social-fb:hover {
-//   color: #3b5998;
-// }
-// #social-tw:hover {
-//   color: #4099ff;
-// }
-// #social-gp:hover {
-//   color: #d34836;
-// }
-// #social-em:hover {
-//   color: #f39c12;
-// }
 
 @each $item, $color in $redes{
   ##{$item}:hover{
